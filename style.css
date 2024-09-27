@@ -11,14 +11,14 @@ html {
 body {
     background-color: #16142b;
     overflow-x: hidden;
-    min-height: 1700px;
+    min-height: 2300px;
 }
 
 #home {
     scroll-margin-top: 200px;
 }
 
-#about {
+#about, #tech {
     scroll-margin-top: 20px;
 }
 
@@ -250,11 +250,23 @@ nav ul li a:hover {
     filter: blur(40px);
 }
 
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
 .heading {
     font-size: 14px;
     text-transform:capitalize;
     font-weight: 700;  
     font-family: 'Poppins';  
+}
+
+.card p a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 14px;
 }
 
 .card p:nth-child(2) {
@@ -277,7 +289,62 @@ nav ul li a:hover {
   }
   
 
+  /* tech */
+
+  .tech {
+    margin-top: 150px;
+  }
+
+  .tech .tech2 {
+    color: rgb(199, 199, 199);
+    font-family: 'Oswald', sans-serif;
+    font-size: 33px;
+    text-align: center;
+  }
+
+  .tech .tech-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    margin: 40px;
+    gap: 75px;
+}
+
+.tech .tech-container .kartu-tech {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: #16142b;
+    box-shadow: 13px 13px 25px rgb(255, 83, 244),
+    -11px -11px 20px rgb(54, 218, 255);
+    position: relative;
+  }
+
+  .tech .tech-container .kartu-tech img{
+    width: 185px;
+    height: 170px;
+    object-fit: cover;
+    position: absolute;
+    top: 35px;
+    left: 3px;
+  }
+
+
+
 /* responsive */
+
+@media screen and (min-width: 720px) and (max-width: 1612px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 768px){
     nav ul {
         width: 100%;
@@ -314,4 +381,6 @@ nav ul li a:hover {
     .project {
         gap: 25px;
     }
+
+    /* tech */
 }
